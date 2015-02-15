@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Task Launcher</title>
+
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body state="{{ $state.current.name }}" ng-controller="coreCtrl as core">
+
+    <div ui-view="nav"></div>
+
+    <div ui-view="header"></div>
+
+    <div ui-view=""></div>
+
+    <div ui-view="footer"></div>
+
+    <!-- Scripts -->
+
+    <!-- App Requirements -->
+    <script src="assets/vendor/angular/angular.js"></script>
+    <script src="assets/vendor/angular-route/angular-route.js"></script>
+    <script src="assets/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- App -->
+    <script src="app/core/authService.js"></script>
+    <script src="app/core/userService.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/core/core.js"></script>
+    <script src="app/home/home.js"></script>
+    <script src="app/login/login.js"></script>
+    <script src="app/user/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<div class="page-header">
+    <h1>
+        <span ng-if="user.type == 'create'">User: Create</span>
+        <span ng-if="user.type == 'edit'">User: Edit</span>
+    </h1>
+</div>
+
+<form class="form-horizontal" ng-submit="user.saveUser()">
+
+    <!-- INPUT NAME -->
+    <div class="form-group">
+        <label class="col-xs-2 control-label">Name</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" ng-model="user.userData.name">
+        </div>
+    </div>
+
+    <!-- INPUT USERNAME -->
+    <div class="form-group">
+        <label class="col-xs-2 control-label">Username</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" ng-model="user.userData.username">
+        </div>
+    </div>
+
+    <!-- INPUT EMAIL -->
+    <div class="form-group">
+        <label class="col-xs-2 control-label">Email</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" ng-model="user.userData.email">
+        </div>
+    </div>
+
+    <!-- INPUT TELEPHONE -->
+    <div class="form-group">
+        <label class="col-xs-2 control-label">Telephone</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" ng-model="user.userData.email">
+        </div>
+    </div>
+
+    <!-- INPUT PASSWORD -->
+    <div class="form-group">
+        <label class="col-xs-2 control-label">Password</label>
+        <div class="col-xs-8">
+            <input type="password" class="form-control" ng-model="user.userData.password">
+        </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-8">
+            <button type="submit" class="btn btn-success btn-block">
+                <span ng-if="user.type == 'create'">Create User</span>
+                <span ng-if="user.type == 'edit'">Update User</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- MESSAGE -->
+    <div ng-show="user.message">
+        <div class="alert alert-info">
+            {{ user.message }}
+        </div>
+    </div>
+
+</form>
